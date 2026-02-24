@@ -15,8 +15,8 @@ const pickImage: Record<Pick, string> = {
 };
 
 const Game: React.FC = () => {
-  const [userPick, setUserPick] = useState<Pick | ''>('');
-  const [cpuPick, setCpuPick] = useState<Pick | ''>('');
+  const [userPick, setUserPick] = useState<Pick | null>(null);
+  const [cpuPick, setCpuPick] = useState<Pick | null>(null);
   const [result, setResult] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
 
@@ -45,8 +45,8 @@ const Game: React.FC = () => {
     const warResult = decideWinner(playerChoice, cpuChoice);
 
     setIsProcessing(true);
-    setUserPick('');
-    setCpuPick('');
+    setUserPick(null);
+    setCpuPick(null);
     setResult('');
 
     setTimeout(() => {
@@ -76,8 +76,8 @@ const Game: React.FC = () => {
 
         {/* Picks */}
         <View style={styles.picksContainer}>
-          <Text style={styles.pickText}>{userPick}</Text>
-          <Text style={styles.pickText}>{cpuPick}</Text>
+           {userPick && <Image source={{uri:pickImage[userPick]}} style={styles.pickImg} />}
+           {cpuPick && <Image source={{uri:pickImage[cpuPick]}} style={styles.pickImg} />}
         </View>
 
         {/* VS Icon */}
@@ -145,9 +145,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     gap: 90
   },
-  pickText: {
-    color: 'white',
-    fontSize: 18
+  pickImg: {
+    height:50,
+    width:50,
   },
   vsContainer: {
     alignItems: 'center'
