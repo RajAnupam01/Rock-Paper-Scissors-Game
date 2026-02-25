@@ -1,50 +1,77 @@
-# Welcome to your Expo app 👋
+# 🎮 Rock Paper Scissors — React Native Game
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple and interactive Rock-Paper-Scissors mobile game built using **React Native + Expo + TypeScript**.
 
-## Get started
+The app features a home screen, game screen, CPU opponent, smooth navigation, and a clean gradient UI.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ✨ Features
 
-2. Start the app
+- 🧠 Player vs CPU gameplay
+- 🎨 Image-based choices (rock, paper, scissors)
+- ⏳ 3-second suspense delay before result
+- 🎯 Winner detection logic
+- 📱 Clean UI with gradient background
+- 🚦 Buttons disabled during processing
+- 🔁 Smooth navigation using Expo Router
+- 🌗 Status bar color matching screen theme
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🧱 Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- Expo Linear Gradient
+- Expo Status Bar
+- React Native Safe Area Context
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 📁 Project Structure
 
-When you're ready, run:
+app/
+├── index.tsx # Home screen
+├── Game.tsx # Rock Paper Scissors game screen
+├── _layout.tsx # Navigation stack
 
-```bash
-npm run reset-project
+
+---
+
+## 🧠 Game Logic Overview
+
+1. Player selects rock, paper, or scissors.
+2. CPU randomly selects a choice.
+3. Result is calculated using game rules.
+4. UI updates after a short delay.
+5. Buttons remain disabled while processing.
+
+---
+
+## 🎮 Game Rules
+
+- Rock beats Scissors
+- Paper beats Rock
+- Scissors beats Paper
+- Same choice → Draw
+
+---
+
+### 1️⃣ Install dependencies
+
+```
+npm install
+npx expo start
+
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+👨‍💻 Author
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Built as a learning project while practicing:
+- React Native UI design
+- Game state management
+- TypeScript in mobile apps
+- Navigation architecture
