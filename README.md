@@ -75,3 +75,8 @@ npx expo start
 - Game state management
 - TypeScript in mobile apps
 - Navigation architecture
+
+
+Here’s a quick walkthrough of the app 👇
+
+https://www.linkedin.com/posts/anupam-raj-159aa93aa_reactnative-typescript-mobileappdevelopment-activity-7432279012997079040-84Ip?utm_source=share&utm_medium=member_android&rcm=ACoAAGQvf5UBOfSWvxNzcVDWvuenVySyGghg8Bg
